@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="/FileCSS/style.css">
+</head>
+<body>
+  <h1 id="head"><strong>Kirana's Fruit Stand</strong></h1>
+  <div class="body">
+    <div class="container">
+      <div class="products">
+          <h2>Products</h2>
+          <div class="product" data-id="1" data-price="4">
+              <img src="/imageFile/cherries.jpeg" alt="Carton of Cherries" style="color:#dddddde5;">
+              <h3>Carton of Cherries</h3>
+              <p>Price: $4</p>
+              <button onclick="addToCart(1, 'Carton of Cherries', 4)">Add to Cart</button>
+          </div>
+          <div class="product" data-id="2" data-price="5">
+              <img src="/imageFile/strawbery.jpeg" alt="Carton of Strawberries"  style="color: hsl(158, 30%, 93%);">
+              <h3>Carton of Strawberries</h3>
+              <p>Price: $5</p>
+              <button onclick="addToCart(2, 'Carton of Strawberries', 5)">Add to Cart</button>
+          </div>
+          <div class="product" data-id="3" data-price="10">
+              <img src="/imageFile/orange.jpeg" alt="Bag of Oranges" width="50%" height="50% style="color: #6060ea;">
+              <h3>Bag of Oranges</h3>
+              <p>Price: $10</p>
+              <button onclick="addToCart(3, 'Bag of Oranges', 10)">Add to Cart</button>
+          </div>
+      </div>
+      
+      <div class="checkout">
+        <h2>Checkout</h2>
+        <p>Cart Total: $<span id="checkout-total">0</span></p>
+        <label>Enter Cash Received: $
+            <input type="number" id="cash-received" />
+        </label>
+        <button onclick="checkout()">Submit</button>
+        <div id="receipt"></div>
+    </div>
+    <div class="sidebar">
+      <div class="cart">
+          <h2>Your Shopping Cart</h2>
+          <div class="cart-items" id="cart-items"></div>
+          <h3>Total: $<span id="cart-total">0</span></h3>
+      </div>
+  
+  </div>
+  
+  </div>
+  
+  <script src="/FileJS/index.js"></script>
+</body>
+</html>
